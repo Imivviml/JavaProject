@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>快速入门</title>
+		<script src="js/vuejs-2.5.16.js"></script>
+	</head>
+	<body>
+		<div id="app">
+			{{message}}<!--Vue的插值表达式,吧data中定义的数据显示到此处-->
+
+			<!--三元运算符-->
+			{{false ? "OK" : "No"}}
+
+			<!--数学表达式-->
+			{{number*3.14}}
+
+			<!-- 这是语句，不是表达式
+			{{ var a = 1 }}
+			流控制也不会生效，请使用三元表达式
+			{{ if (ok) { return message } }}
+			-->
+		</div>
+	</body>
+	<script>
+		//view model
+		//创建Vue对象
+		new Vue({
+			el:"#app",//由vue接管id为app的区域
+			data:{
+				message:"Hello Vue!", //注意,此处不要加分号
+				number:100
+			}
+		})
+	</script>
+</html>
